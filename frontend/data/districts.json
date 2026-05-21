@@ -1,0 +1,113 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "historic-center",
+        "name": "Historic Center",
+        "scores": {
+          "cultural_energy": 0.92,
+          "mobility_anxiety": 0.58,
+          "family_security": 0.67,
+          "bureaucratic_friction": 0.49,
+          "isolation_risk": 0.21
+        },
+        "explanation": "The center pulses with festivals and foot traffic. Residents feel inspired but report stress from dense parking and circulation pressure."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [11.0340, 45.8915],
+            [11.0453, 45.8924],
+            [11.0458, 45.8868],
+            [11.0342, 45.8859],
+            [11.0340, 45.8915]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sacro-cuore",
+        "name": "Sacro Cuore",
+        "scores": {
+          "cultural_energy": 0.56,
+          "mobility_anxiety": 0.44,
+          "family_security": 0.84,
+          "bureaucratic_friction": 0.38,
+          "isolation_risk": 0.29
+        },
+        "explanation": "Strong school and family services drive confidence. Cultural intensity is softer, but social cohesion remains high and stable."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [11.0255, 45.8929],
+            [11.0339, 45.8933],
+            [11.0341, 45.8864],
+            [11.0252, 45.8862],
+            [11.0255, 45.8929]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "lizzana-mori-station",
+        "name": "Lizzana / Southern Corridor",
+        "scores": {
+          "cultural_energy": 0.41,
+          "mobility_anxiety": 0.81,
+          "family_security": 0.52,
+          "bureaucratic_friction": 0.62,
+          "isolation_risk": 0.48
+        },
+        "explanation": "Mobility burden dominates this corridor: commuting stress and crossing times shape daily mood more than cultural participation."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [11.0342, 45.8856],
+            [11.0456, 45.8863],
+            [11.0461, 45.8785],
+            [11.0344, 45.8777],
+            [11.0342, 45.8856]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "noriglio-hills",
+        "name": "Noriglio Hills",
+        "scores": {
+          "cultural_energy": 0.48,
+          "mobility_anxiety": 0.36,
+          "family_security": 0.59,
+          "bureaucratic_friction": 0.54,
+          "isolation_risk": 0.72
+        },
+        "explanation": "Beautiful but geographically detached, this area shows a higher isolation signal, especially for seniors without frequent transit options."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [11.0448, 45.8958],
+            [11.0549, 45.8964],
+            [11.0555, 45.8893],
+            [11.0451, 45.8889],
+            [11.0448, 45.8958]
+          ]
+        ]
+      }
+    }
+  ]
+}
