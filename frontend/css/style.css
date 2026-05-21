@@ -1,0 +1,175 @@
+:root {
+    --bg-deep: #090d1f;
+    --bg-panel: rgba(18, 25, 49, 0.88);
+    --glow-amber: rgba(251, 191, 36, 0.4);
+
+    --cultural-energy: #FFD700;
+    --mobility-anxiety: #FF4444;
+    --family-security: #4CAF50;
+    --bureaucratic-friction: #9C27B0;
+    --isolation-risk: #1A237E;
+}
+
+html,
+body {
+    height: 100%;
+    background: radial-gradient(circle at 15% 15%, #15213d 0%, var(--bg-deep) 40%, #05070f 100%);
+    font-family: "Inter", "Segoe UI", sans-serif;
+    color: #f8fafc;
+}
+
+/* Fallback utility classes for environments where Tailwind CDN is unavailable */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-1 { flex: 1 1 0%; }
+.h-screen { height: 100vh; }
+.w-screen { width: 100vw; }
+.w-80 { width: 20rem; }
+.p-4 { padding: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-3 { margin-top: 0.75rem; }
+.space-y-2 > * + * { margin-top: 0.5rem; }
+.rounded { border-radius: 0.25rem; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-xs { font-size: 0.75rem; line-height: 1rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.leading-relaxed { line-height: 1.625; }
+.overflow-hidden { overflow: hidden; }
+.overflow-y-auto { overflow-y: auto; }
+.hidden { display: none; }
+
+.bg-gray-900 { background-color: #111827; }
+.bg-gray-800 { background-color: #1f2937; }
+.border { border-width: 1px; border-style: solid; }
+.border-l { border-left-width: 1px; border-left-style: solid; }
+.border-gray-700 { border-color: #374151; }
+.text-white { color: #f8fafc; }
+.text-gray-300 { color: #d1d5db; }
+.text-gray-400 { color: #9ca3af; }
+.text-gray-500 { color: #6b7280; }
+.text-amber-400 { color: #fbbf24; }
+
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+}
+
+#map {
+    position: relative;
+    filter: saturate(1.1) contrast(1.05);
+}
+
+#map::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 20% 15%, rgba(255, 215, 0, 0.1), transparent 45%),
+    radial-gradient(circle at 80% 60%, rgba(26, 35, 126, 0.25), transparent 50%);
+    mix-blend-mode: screen;
+    z-index: 400;
+}
+
+.sidebar-shell {
+    background: linear-gradient(180deg, rgba(20, 28, 54, 0.95) 0%, var(--bg-panel) 100%);
+    backdrop-filter: blur(8px);
+    box-shadow: -12px 0 40px rgba(0, 0, 0, 0.55);
+}
+
+.emotion-btn {
+    background: rgba(55, 65, 81, 0.7);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    transition: all 220ms ease;
+    letter-spacing: 0.015em;
+}
+
+.emotion-btn:hover {
+    transform: translateX(2px);
+    border-color: rgba(251, 191, 36, 0.45);
+    box-shadow: 0 0 18px rgba(251, 191, 36, 0.18);
+}
+
+.emotion-btn.active {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 22px rgba(255, 255, 255, 0.22);
+}
+
+.emotion-btn[data-emotion="cultural_energy"].active {
+    background: color-mix(in srgb, var(--cultural-energy) 35%, #101625);
+    box-shadow: 0 0 22px color-mix(in srgb, var(--cultural-energy) 45%, transparent);
+}
+
+.emotion-btn[data-emotion="mobility_anxiety"].active {
+    background: color-mix(in srgb, var(--mobility-anxiety) 30%, #101625);
+    box-shadow: 0 0 22px color-mix(in srgb, var(--mobility-anxiety) 42%, transparent);
+}
+
+.emotion-btn[data-emotion="family_security"].active {
+    background: color-mix(in srgb, var(--family-security) 28%, #101625);
+    box-shadow: 0 0 22px color-mix(in srgb, var(--family-security) 40%, transparent);
+}
+
+.emotion-btn[data-emotion="bureaucratic_friction"].active {
+    background: color-mix(in srgb, var(--bureaucratic-friction) 30%, #101625);
+    box-shadow: 0 0 22px color-mix(in srgb, var(--bureaucratic-friction) 42%, transparent);
+}
+
+.emotion-btn[data-emotion="isolation_risk"].active {
+    background: color-mix(in srgb, var(--isolation-risk) 36%, #101625);
+    box-shadow: 0 0 22px color-mix(in srgb, var(--isolation-risk) 46%, transparent);
+}
+
+#info-panel {
+    background: linear-gradient(180deg, rgba(10, 14, 29, 0.92), rgba(8, 12, 24, 0.94));
+    box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.6);
+    animation: panelFade 350ms ease;
+}
+
+#district-name {
+    text-shadow: 0 0 10px var(--glow-amber);
+}
+
+.score-bar {
+    border-radius: 999px;
+    height: 6px;
+    background: rgba(148, 163, 184, 0.25);
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.score-bar > span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    animation: scoreGrow 700ms ease;
+}
+
+.leaflet-tooltip.city-pulse-tooltip {
+    background: rgba(5, 8, 18, 0.88);
+    color: #f8fafc;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    box-shadow: 0 0 16px rgba(15, 23, 42, 0.8);
+}
+
+@keyframes scoreGrow {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes panelFade {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
