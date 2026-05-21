@@ -94,16 +94,16 @@
             })
             .filter(Boolean);
 
-        heatLayer = L.heatLayer(heatPoints, {
-            radius: 35,
-            blur: 25,
-            maxZoom: 15,
-            gradient: {
-                0.2: "#0f172a",
-                0.55: palette[activeEmotion],
-                0.9: "#ffffff"
-            }
-        }).addTo(map);
+        heatLayer = L.layerGroup(
+            heatPoints.map(function (point) {
+                return L.circle([point[0], point[1]], {
+                    radius: 180 + point[2] * 520,
+                    stroke: false,
+                    fillColor: palette[activeEmotion],
+                    fillOpacity: 0.1 + point[2] * 0.24
+                });
+            })
+        ).addTo(map);
     }
 
     function loadDistricts(geoJson, onDistrictClick) {
